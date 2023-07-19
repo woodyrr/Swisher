@@ -206,9 +206,9 @@ button1.addEventListener('click',() => {
 
             <div class=" pt-4 flex space-x-3">
               <div>QTY:</div>
-              <button class="plus px-4 bg-gray-200 rounded-full text-lg">+</button>
-              <div class="itemNum">6</div>
               <button class="minus px-4 bg-gray-200 rounded-full text-lg">-</button>
+              <div class="itemNum">6</div>
+              <button class="plus px-4 bg-gray-200 rounded-full text-lg">+</button>
               
             </div>  
     `;
