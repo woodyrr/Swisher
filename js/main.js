@@ -153,29 +153,6 @@ function cartSide(){
 }
 cartSide();
 
-// let button1 = document.querySelector('.button1')
-// let cartItems = document.getElementById('cartItems')
-// button1.addEventListener('click',() => {
-//     // let cartImg = document.createElement('img')
-//     // let pName = document.createElement('h2')
-//     // let price = document.createElement('div')
-//     // cartImg.src = 
-//     for(let items of drinks){
-//         let news = document.createElement('div')
-//         let cartImg = document.createElement('img')
-//         let pName = document.createElement('h2')
-//         let price = document.createElement('h3')
-//         // let quantity = document.createElement('div')
-//         cartImg.src = items.img
-//         pName.textContent = items.name
-//         price.textContent = items.qty
-
-//         cartItems.appendChild(news)
-//         news.appendChild(cartImg)
-//         news.appendChild(pName)
-//         news.appendChild(price)
-//     }
-// })
 
 let svg1 = document.getElementById('svg1')
 svg1.addEventListener('click',() => {
@@ -229,12 +206,6 @@ button1.addEventListener('click',() => {
             itemnum.innerHTML = num 
             price.innerHTML = `<div class="pt-20">$${pricenum}</div>`
             
-        }
-        else{
-            num *= ''
-            pricenum *= '' 
-            itemnum.innerHTML = ''
-            price.innerHTML = ''
         }
         
 
