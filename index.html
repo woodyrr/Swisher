@@ -28,11 +28,10 @@
           </button>
           <div class="hidden w-full md:block md:w-auto " id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
-                <li><a href="/" class=" hover-3 block py-2 pl-3 pr-4 font-semibold rounded md:p-0" aria-current="page">HOME</a></li>
                 <li><a href="#Shop" class="hover-3 block py-2 pl-3 pr-4 font-semibold rounded  md:border-0 md:p-0">SHOP</a></li>
                 <li><a href="#Delivery" class="hover-3 block py-2 pl-3 pr-4 font-semibold  rounded  md:border-0  md:p-0 ">DELIVERY</a></li>
-                <li><a href="#App"  class="hover-3 block py-2 pl-3 pr-4 font-semibold  rounded  md:border-0  md:p-0 ">APP</a></li>
-                <li ><a href="#Contact" class="hover-3 block py-2 pl-3 pr-4 font-semibold rounded  md:border-0  md:p-0 ">CONTACT</a></li>
+                <li><a href="#Contact"  class="hover-3 block py-2 pl-3 pr-4 font-semibold  rounded  md:border-0  md:p-0 ">CONTACT</a></li>
+                <li ><i id="cart" class="fa-solid fa-cart-shopping text-lg"></i></li>
             </ul>
             
           </div>
@@ -50,7 +49,28 @@
         </div>
         <img class=" block ml-auto mr-auto h-52 md:h-80 lg:h-96 xl:h-full xl:px-8"  src="https://www.pepsi.com/en-us/uploads/images/can-pepsi-zero-sugar.png">
     </main>
-
+    <div id="cartmodal" class="hidden w-full h-full top-0 right-0 bg-[rgba(0,0,0,0.8)] z-[99999]">
+      <aside class="bg-gray-100 w-[100%] lg:w-[36em] h-full fixed right-0 top-0 z-[999999] transition-all duration-[0.6s] ease-linear delay-2s">
+        <section class="relative max-h-[100%] pt-[2rem] pb-[8rem] pr-[2rem] ml-6 lg:mx-8">
+          <div class="flex justify-between">
+            <div id="sideArrow">
+              <i class="fa-solid fa-angle-left text-2xl"></i>
+            </div>
+          </div>
+          <div class="text-center">ORDER DETAILS</div>
+          <div class="w-full mx-5 mt-3 border border-gray-200"></div>
+          <div class="pt-8 font-bold text-2xl">MY CART</div>
+          <div id="cartItems" class="flex space-x-4 justify-between">
+            
+            
+          </div>
+          <div id="remove" class="hidden flex justify-center pt-3 2xl:ml-12 ">
+            <button class="text-center bg-[#e2dddd] p-2 rounded-lg">REMOVE ITEM</button>
+          </div>
+          
+        </section>
+      </aside>
+    </div>
     <div id="Shop" class="shop-now mb-44 ml-8">
         <div class="mt-16 md:flex md:justify-between md:my-16 md:mx-32">
             <div class="item-1 flex font-serif md:w-2/5 py-16 md:pt-32  justify-center ">
@@ -59,10 +79,10 @@
                 </div>
                 <form class="flex-auto p-4  md:p-6">
                   <div class="flex flex-wrap items-baseline">
-                    <h1 class="w-full flex-none mb-2 text-md md:text-xl lg:text-2xl leading-none text-slate-900">
+                    <h2 class="w-full flex-none mb-2 text-md md:text-xl lg:text-2xl leading-none text-slate-900">
                       12oz Pepsi Zero Sugar
-                    </h1>
-                    <div class="flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
+                    </h2>
+                    <div class="price1 flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
                       $4.99
                     </div>
                   </div>
@@ -70,31 +90,26 @@
                     <div class="space-x-1 flex text-sm font-medium">
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="6" checked />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt1 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           6
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="12" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt2 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           12
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="24" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt3 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           24
                         </div>
                       </label>
-                      <label>
-                        <input class="sr-only peer" name="size" type="radio" value="35" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
-                          35
-                        </div>
-                      </label>
+                      
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="48" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt4 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           48
                         </div>
                       </label>
@@ -102,11 +117,11 @@
                   </div>
                   <div class="flex space-x-4 mb-5 text-sm/[17px] lg:text-sm font-medium">
                     <div class="flex-auto flex space-x-4  sm:pr-72 md:pr-0 lg:pr-0">
-                      <button class="flex-none w-5/6 md:w-1/2 xl:w-1/2 h-12 uppercase font-medium tracking-wider bg-gray-700 text-white hover:bg-gray-500 " type="submit">
+                      <button class="button1 flex-none w-5/6 md:w-1/2 xl:w-1/2 h-12 uppercase font-medium tracking-wider bg-gray-700 text-white hover:bg-gray-500 " type="button">
                         Buy
                       </button>
                     </div>
-                    <button class=" invisible xl:visible md:flex md:items-center md:justify-center md:w-12 md:h-12 md:text-slate-300 md:border md:border-slate-200" type="button" aria-label="Like">
+                    <button id="svg1" class=" invisible xl:visible md:flex md:items-center md:justify-center md:w-12 md:h-12 md:text-slate-300 md:border md:border-slate-200" type="button" aria-label="Like">
                         <svg width="20" height="20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                           </svg>
@@ -129,7 +144,7 @@
                     <h1 class="w-full flex-none mb-2 text-md md:text-xl lg:text-2xl leading-none text-slate-900">
                       12oz Pepsi 
                     </h1>
-                    <div class="flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
+                    <div class="price2 flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
                       $4.99
                     </div>
                   </div>
@@ -137,31 +152,26 @@
                     <div class="space-x-1 flex text-sm font-medium">
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="6" checked />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt5 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           6
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="12" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt6 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           12
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="24" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt7 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           24
                         </div>
                       </label>
-                      <label>
-                        <input class="sr-only peer" name="size" type="radio" value="35" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
-                          35
-                        </div>
-                      </label>
+                      
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="48" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt8 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           48
                         </div>
                       </label>
@@ -198,7 +208,7 @@
                     <h1 class="w-full flex-none mb-2 text-md md:text-xl lg:text-2xl leading-none text-slate-900">
                       12oz Pepsi Cherry
                     </h1>
-                    <div class="flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
+                    <div class="price3 flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
                       $4.99
                     </div>
                   </div>
@@ -206,31 +216,26 @@
                     <div class="space-x-1 flex text-sm font-medium">
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="6" checked />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt9 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           6
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="12" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt10 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           12
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="24" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt11 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           24
                         </div>
                       </label>
-                      <label>
-                        <input class="sr-only peer" name="size" type="radio" value="35" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
-                          35
-                        </div>
-                      </label>
+                      
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="48" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt12 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           48
                         </div>
                       </label>
@@ -265,7 +270,7 @@
                     <h1 class="w-full flex-none mb-2 text-md md:text-xl lg:text-2xl leading-none text-slate-900">
                       12oz Pepsi Mango
                     </h1>
-                    <div class="flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
+                    <div class="price4 flex-auto text-sm md:text-md lg:text-lg font-medium text-slate-500">
                       $4.99
                     </div>
                   </div>
@@ -273,31 +278,26 @@
                     <div class="space-x-1 flex text-sm font-medium">
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="6" checked />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt13 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           6
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="12" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt14 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           12
                         </div>
                       </label>
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="24" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt15 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           24
                         </div>
                       </label>
-                      <label>
-                        <input class="sr-only peer" name="size" type="radio" value="35" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
-                          35
-                        </div>
-                      </label>
+                      
                       <label>
                         <input class="sr-only peer" name="size" type="radio" value="48" />
-                        <div class="w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
+                        <div class="qt16 w-5 h-5 md:h-7 md:w-7 rounded-full flex items-center justify-center text-slate-500 peer-checked:bg-slate-100 peer-checked:text-slate-900">
                           48
                         </div>
                       </label>
@@ -315,7 +315,7 @@
                           </svg>
                     </button>
                   </div>
-                  <p class="text-sm/[17px] md:text-sm text-slate-500">
+                  <p class="dude text-sm/[17px] md:text-sm text-slate-500">
                     Free shipping on all continental US orders.
                   </p>
                 </form>
@@ -408,7 +408,7 @@
 
 
 
-
+    <script src="js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
