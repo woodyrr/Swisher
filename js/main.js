@@ -547,7 +547,7 @@ cart4()
 
 
 
-function dude(){
+function dawg(){
     let nav = document.getElementById('nav')
     var x = window.matchMedia("(max-width: 500px)")
     document.addEventListener('scroll',() => {
@@ -563,15 +563,4 @@ function dude(){
 })
 }
 
-// function myFunction(x) {
-//     if (x.matches) { // If media query matches
-//       document.body.style.backgroundColor = "yellow";
-//     } else {
-//      document.body.style.backgroundColor = "pink";
-//     }
-//   }
-
-
-// myFunction(x) // Call listener function at run time
-
-dude()
+dawg()
