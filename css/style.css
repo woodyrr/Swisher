@@ -43,3 +43,22 @@ main img{
     }
 }
 
+.nav-open-btn .line{
+    transform-origin: left;
+    animation: menuBtn 700ms ease-in-out alternate infinite;
+}
+.nav-open-btn .line:nth-child(1){
+    animation-delay: 300ms;
+}
+.nav-open-btn .line:nth-child(3){
+    animation-delay: 500ms;
+}
+.nav-open-btn.animation .line  { animation-play-state: paused;}
+@keyframes menuBtn{
+    0% {transform: scaleX(1);}
+    100% {transform: scaleX(0.5);}
+}
+.line{
+    background-color: black;
+}
+
