@@ -564,3 +564,8 @@ function dawg(){
 }
 
 dawg()
+let openbtn = document.querySelector('.nav-open-btn')
+let navbar = document.getElementById('navbar-default')
+openbtn.addEventListener('click',() =>{
+    navbar.classList.toggle('hidden')
+})
